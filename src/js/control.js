@@ -73,9 +73,7 @@ export function TouchHandler(app) {
 			if (duration <= app.gestures.tap.time
 				&& distance.x <= app.gestures.tap.distance && distance.y < app.gestures.tap.distance) {
 					$("#message").html("TAPPED!")
-			} else {
-        $("#message").html("TOO SLOW! " + duration)
-      }
+			}
 			app.currentTouches.splice(i, 1);
 		});
   }
