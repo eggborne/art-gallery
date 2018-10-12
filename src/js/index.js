@@ -1,4 +1,3 @@
-import '../css/styles.css';
 import '../sass/styles.scss';
 import { App } from './app';
 import { TouchHandler } from './control';
