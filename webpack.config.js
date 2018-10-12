@@ -13,7 +13,6 @@ module.exports = {
   },
   module: {
     rules: [
-     
       {
         test: /\.scss$/,
         use: [
@@ -21,7 +20,25 @@ module.exports = {
           "css-loader",
           'sass-loader'
         ]
-      }
+      },
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/'
+            }
+          }
+        ]
+      },
+      {
+        test:/\.html$/,
+        use: [
+          'html-loader'
+        ]
+      },
     ]
   },
   plugins: [
@@ -29,7 +46,7 @@ module.exports = {
       inject: 'body',
       template: './src/index.html',
       filename: 'index.html',
-      favicon: 'favicon.png'
+      favicon: './src/assets/images/favicon.png'
       // title: 'SusanBurke.art'
     })
   ]
