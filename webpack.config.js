@@ -13,6 +13,7 @@ module.exports = {
       inject: 'body',
       template: './src/index.html',
       filename: 'index.html',
+      favicon: 'favicon.png'
       // title: 'SusanBurke.art'
     })
   ],
